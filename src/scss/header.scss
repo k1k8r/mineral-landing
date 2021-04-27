@@ -1,2 +1,197 @@
 @import "normalize";
 @import "variables";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	box-shadow: 0 0 4px $main-shadow;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $main-background;
+		z-index: 3;
+	}
+
+	&-container {
+		max-width: 1500px;
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+		padding-left: 20px;
+	}
+
+	&-body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	&-logo {
+		flex: 0 0 60px;
+		position: relative;
+		z-index: 4;
+
+		& img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+
+	&-burger {
+		display: none;
+	}
+
+	&-nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&-menu {
+		display: flex;
+		position: relative;
+		z-index: 3;
+
+		& li {
+			list-style: none;
+			margin-right: 30px;
+		}
+
+		&__link {
+			font-size: 18px;
+			font-weight: 400;
+			text-decoration: none;
+			background: $main-gradient;
+			background-clip: text;
+			color: transparent;
+
+			&:hover {
+				color: $text-hover;
+				cursor: pointer;
+			}
+		}
+
+		&__button {
+			position: relative;
+			font-size: 24px;
+			font-weight: 500;
+			color: $main-background;
+			background: $main-gradient;
+			padding: 35px 20px;
+			z-index: 3;
+		}
+	}
+}
+
+@media (max-width: 1101px) {
+	.header {
+		body.lock {
+			overflow: hidden;
+		}
+
+		&-container {
+			padding: 30px 20px;
+		}
+
+		&-logo {
+			flex: 0 0 40px;
+		}
+
+		&-burger {
+			display: block;
+			position: relative;
+			width: 50px;
+			height: 35px;
+			z-index: 56;
+
+			& span {
+				position: absolute;
+				background: $main-gradient;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				top: 15px;
+				transition: all 0.3s ease 0s;
+			}
+
+			&::before {
+				content: "";
+				background: $main-gradient;
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				left: 0;
+				transition: all 0.3s ease 0s;
+				top: 0;
+			}
+
+			&::after {
+				content: "";
+				background: $main-gradient;
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				left: 0;
+				transition: all 0.3s ease 0s;
+				bottom: 0;
+			}
+
+			&.active {
+				& span {
+					transform: scale(0);
+				}
+
+				&::before {
+					transform: rotate(45deg);
+					top: 14px;
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+					bottom: 17px;
+				}
+			}
+		}
+
+		&-nav {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			width: 80%;
+			height: 100%;
+			overflow: hidden;
+			transition: all 0.3s ease 0s;
+			background-color: $main-background;
+			box-shadow: 0px 5px 16px rgba(90, 90, 90, 0.25);
+			padding: 150px 0 20px 0;
+			z-index: 55;
+
+			&.active {
+				left: 0;
+			}
+		}
+
+		&-menu {
+			display: block;
+			padding: 0 10px;
+
+			& li {
+				margin: 0 0 20px 0;
+			}
+
+			&__link {
+				font-size: 24px;
+			}
+		}
+	}
+}
