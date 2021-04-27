@@ -1,35 +1,35 @@
-@import 'normalize';
-@import 'variables';
+@import "normalize";
+@import "variables";
 
-.advantages{
-  width: 100%;
-  padding: 80px 0 80px 0;
-  background-image: url('/src/img/back3.png');
-  background-size: cover;
+.advantages {
+	width: 100%;
+	padding: 80px 0 80px 0;
+	background-image: url("/src/img/back3.png");
+	background-size: cover;
 
-  .container{
-    max-width: $container-width;
-    margin: 0 auto;
-  }
+	.container {
+		max-width: $container-width;
+		margin: 0 auto;
+	}
 
-  &__topic{
-    font-weight: bold;
-    font-size: 64px;
-    color: white;
-  }
+	&__topic {
+		font-weight: bold;
+		font-size: 64px;
+		color: white;
+	}
 
-  .cards-block{
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: white;
-    padding: 50px;
+	.cards-block {
+		display: flex;
+		flex-flow: row nowrap;
+		background-color: white;
+		padding: 50px;
 
-    .card{
-      &__topic{
-        color: transparent;
-        background-clip: text;
-        background-image: $main-gradient;
-      }
-    }
-  }
+		.card {
+			&__topic {
+				color: transparent;
+				background-clip: text;
+				background-image: $main-gradient;
+			}
+		}
+	}
 }

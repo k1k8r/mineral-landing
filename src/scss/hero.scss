@@ -1,75 +1,74 @@
-@import 'normalize';
-@import 'variables';
+@import "normalize";
+@import "variables";
 
 .hero {
-  min-width: 100%;
-  background-image: url('/src/img/back1.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: white;
-  padding: 50px;
-  margin-top: 98px;
+	min-width: 100%;
+	background-image: url("/src/img/back1.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: white;
+	padding: 50px;
+	margin-top: 98px;
 
-  .text-raws {
-    max-width: 1200px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    margin: 0 auto;
-  }
-  .text-raw {
-    &_1 {
-      font-weight: 700;
-      font-size: 120px;
-    }
-    &_2 {
-      align-self: center;
-      font-weight: 500;
-      font-size: 64px;
-    }
-    &_3 {
-      align-self: flex-end;
-      font-weight: 400;
-      font-size: 48px;
-    }
-  }
+	.text-raws {
+		max-width: 1200px;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		margin: 0 auto;
+	}
+	.text-raw {
+		&_1 {
+			font-weight: 700;
+			font-size: 120px;
+		}
+		&_2 {
+			align-self: center;
+			font-weight: 500;
+			font-size: 64px;
+		}
+		&_3 {
+			align-self: flex-end;
+			font-weight: 400;
+			font-size: 48px;
+		}
+	}
 }
 
-
-@media (max-width: 1024px){
-  .hero{
-    .text-raw {
-      &_1 {
-        font-size: 64px;
-      }
-      &_2 {
-        font-size: 48px;
-      }
-      &_3 {
-        font-size: 24px;
-      }
-    }
-  }
+@media (max-width: 1024px) {
+	.hero {
+		.text-raw {
+			&_1 {
+				font-size: 64px;
+			}
+			&_2 {
+				font-size: 48px;
+			}
+			&_3 {
+				font-size: 24px;
+			}
+		}
+	}
 }
 
-@media (max-width: 530px){
-  .hero{
-    padding: 50px 10px;
+@media (max-width: 530px) {
+	.hero {
+		padding: 50px 10px;
 
-    .text-raw {
-      &_1 {
-        align-self: center;
-        font-size: 48px;
-      }
-      &_2 {
-        align-self: center;
-        font-size: 24px;
-      }
-      &_3 {
-        align-self: center;
-        font-size: 18px;
-      }
-    }
-  }
+		.text-raw {
+			&_1 {
+				align-self: center;
+				font-size: 48px;
+			}
+			&_2 {
+				align-self: center;
+				font-size: 24px;
+			}
+			&_3 {
+				align-self: center;
+				font-size: 18px;
+			}
+		}
+	}
 }
