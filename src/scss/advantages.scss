@@ -1,35 +1,125 @@
 @import "normalize";
 @import "variables";
-
 .advantages {
-	width: 100%;
-	padding: 80px 0 80px 0;
-	background-image: url("/src/img/back3.png");
-	background-size: cover;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    background-image: url("/build/img/advantages/back3.png");
+    background-size: cover;
+    .container {
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    &__topic {
+        font-weight: bold;
+        font-size: 64px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .cards-block {
+        display: inline-flex;
+        flex-flow: row wrap;
+        background-color: white;
+        border-radius: 7px;
+        padding: 50px;
+        .line_ver::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -35px;
+            height: 250px;
+            width: 1px;
+            background-color: #B8B8B8;
+        }
+        .card {
+            position: relative;
+            width: 250px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            &__topic {
+                font-weight: 700;
+                font-size: 20px;
+                text-decoration: none;
+                background: $main-gradient;
+                background-clip: text;
+                color: transparent;
+                margin-bottom: 15px;
+            }
+            &__img {
+                width: 120px;
+                height: 126px;
+            }
+        }
+    }
+}
 
-	.container {
-		max-width: $container-width;
-		margin: 0 auto;
-	}
+@media (max-width: 1136px) {
+    .cards-block {
+        justify-content: center;
+        .line_ver:nth-child(3)::after {
+            display: none;
+        }
+        .card:last-child {
+            margin-top: 50px;
+        }
+    }
+}
 
-	&__topic {
-		font-weight: bold;
-		font-size: 64px;
-		color: white;
-	}
+@media (max-width: 889px) {
+    .cards-block {
+        .line_ver:nth-child(3)::after {
+            display: inherit;
+        }
+        .line_ver:nth-child(2)::after {
+            display: none;
+        }
+        .card:last-child {
+            margin: 0;
+        }
+        .card:nth-child(1),
+        .card:nth-child(2) {
+            margin-bottom: 30px;
+        }
+    }
+}
 
-	.cards-block {
-		display: flex;
-		flex-flow: row nowrap;
-		background-color: white;
-		padding: 50px;
+@media (max-width: 639px) {
+    .advantages {
+        .cards-block {
+            padding: 20px 0;
+            .line_ver::after {
+                height: 100%;
+                top: 0px;
+            }
+        }
+    }
+}
 
-		.card {
-			&__topic {
-				color: transparent;
-				background-clip: text;
-				background-image: $main-gradient;
-			}
-		}
-	}
+@media (max-width: 539px) {
+    .advantages {
+        .cards-block {
+            padding: 20px 0;
+            .line_ver::after {
+                display: inherit;
+                top: 200px;
+                width: 100%;
+                height: 1px;
+            }
+            .card:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .advantages {
+        padding: 20px 0;
+        &__topic {
+            font-size: 36px;
+        }
+    }
 }

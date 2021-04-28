@@ -1,72 +1,71 @@
 @import "normalize";
 @import "variables";
-
 .hero {
-	max-width: 100%;
-	background: url("../../build/img/back1.png") center no-repeat;
-	background-size: cover;
-	color: white;
-	padding: 75px 0;
-	margin-top: 98px;
-
-	.text-raws {
-		max-width: 1200px;
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: space-around;
-		margin: 0 auto;
-	}
-	.text-raw {
-		&__1 {
-			font-weight: 700;
-			font-size: 120px;
-		}
-		&__2 {
-			align-self: center;
-			font-weight: 500;
-			font-size: 64px;
-		}
-		&__3 {
-			align-self: flex-end;
-			font-weight: 400;
-			font-size: 48px;
-		}
-	}
+    max-width: 100%;
+    background: url("/build/img/hero/back1.png") center no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 75px 20px;
+    margin-top: 98px;
+    .text-raws {
+        max-width: 1200px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    .text-raw {
+        &__1 {
+            font-weight: 700;
+            font-size: 120px;
+            margin-bottom: 10px;
+        }
+        &__2 {
+            align-self: center;
+            font-weight: 500;
+            font-size: 64px;
+            margin-bottom: 10px;
+        }
+        &__3 {
+            align-self: flex-end;
+            font-weight: 400;
+            font-size: 48px;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
-	.hero {
-		.text-raw {
-			&__1 {
-				font-size: 64px;
-			}
-			&__2 {
-				font-size: 48px;
-			}
-			&__3 {
-				font-size: 24px;
-			}
-		}
-	}
+    .hero {
+        .text-raw {
+            &__1 {
+                font-size: 64px;
+            }
+            &__2 {
+                font-size: 48px;
+            }
+            &__3 {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 @media (max-width: 530px) {
-	.hero {
-		padding: 50px 10px;
-
-		.text-raw {
-			&__1 {
-				align-self: center;
-				font-size: 48px;
-			}
-			&__2 {
-				align-self: center;
-				font-size: 24px;
-			}
-			&__3 {
-				align-self: center;
-				font-size: 18px;
-			}
-		}
-	}
+    .hero {
+        padding: 50px 10px;
+        .text-raw {
+            &__1 {
+                align-self: center;
+                font-size: 48px;
+            }
+            &__2 {
+                align-self: center;
+                font-size: 24px;
+            }
+            &__3 {
+                align-self: center;
+                font-size: 18px;
+            }
+        }
+    }
 }
