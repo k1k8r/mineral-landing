@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 	<link rel="stylesheet" href="build/css/style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;500;600;700&display=swap"
@@ -108,27 +109,33 @@
 	<section class="slider">
 		<div class="container">
 			<h1 class="slider__title">Публикации</h1>
-			<div class="slider-wrapper">
-				<div class="slider-container">
-					<div class="slider-track">
-						<div class="slider-item"><img src="build/img/slider/slide-1.png" alt="Slide 1"></div>
-						<div class="slider-item"><img src="build/img/slider/slide-1.png" alt="Slide 2"></div>
-						<div class="slider-item"><img src="build/img/slider/slide-1.png" alt="Slide 3"></div>
-						<div class="slider-item"><img src="build/img/slider/slide-1.png" alt="Slide 4"></div>
-						<div class="slider-item"><img src="build/img/slider/slide-1.png" alt="Slide 5"></div>
-						<div class="slider-item"><img src="build/img/slider/slide-1.png" alt="Slide 6"></div>
-					</div>
-				</div>
-				<div class="slider-btn">
-					<button class="slider-btn__prev"></button>
-					<button class="slider-btn__next"></button>
-				</div>
+			<div class="my-slider">
+				<div><img src="build/img/slider/slide-1.png" alt="Slide-1"></div>
+				<div><img src="build/img/slider/slide-2.png" alt="Slide-2"></div>
+				<div><img src="build/img/slider/slide-3.png" alt="Slide-3"></div>
+				<div><img src="build/img/slider/slide-4.png" alt="Slide-4"></div>
+				<div><img src="build/img/slider/slide-5.png" alt="Slide-5"></div>
+				<div><img src="build/img/slider/slide-6.png" alt="Slide-6"></div>
 			</div>
 		</div>
 	</section>
 
 </body>
 
+<script type="module">
+	import { tns } from './node_modules/tiny-slider/src/tiny-slider.js'
+	var slider = tns({
+		container: '.my-slider',
+		items: 5,
+		gutter: 15,
+		slideBy: 1,
+		controls: false,
+		autoplay: true,
+		autoplayButtonOutput: false,
+	});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="build/js/script.js"></script>
 
 </html>

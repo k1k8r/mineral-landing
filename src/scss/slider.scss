@@ -11,28 +11,9 @@
 		color: $main-text-color;
 		margin-bottom: 50px;
 	}
-
-	&-wrapper {
-		max-width: $container-width;
-		margin: 0 auto;
-	}
-	&-container {
-	}
-	&-track {
-	}
-	&-item {
-	}
-	&-btn {
-		text-align: center;
-	}
-	&-btn__prev {
-	}
-	&-btn__next {
-	}
 }
 
 .container {
 	max-width: $container-width;
 	margin: 0 auto;
-	padding: 0 20px;
 }
