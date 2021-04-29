@@ -15,15 +15,17 @@ const scssFiles = [
 	'./src/scss/normalize.scss',
 	'./src/scss/variables.scss',
 	'./src/scss/header.scss',
+	'./src/scss/hero.scss',
 	'./src/scss/application.scss',
 	'./src/scss/advantages.scss',
-	'./src/scss/hero.scss'
+	'./src/scss/slider.scss',
 ]
 
 // Порядок подключения JS файлов
 const jsFiles = [
 	'./src/js/burger.js',
 	'./src/js/popup.js',
+	'./src/js/slider.js',
 ]
 
 //Таск на стили CSS

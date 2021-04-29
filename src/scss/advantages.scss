@@ -18,6 +18,22 @@
 		color: white;
 		margin-bottom: 20px;
 	}
+
+	&__title {
+		font-size: 64px;
+		font-weight: 700;
+		color: $main-background;
+		margin-top: 45px;
+	}
+
+	&__description {
+		font-size: 25px;
+		font-weight: 400;
+		color: $main-background;
+		margin-top: 20px;
+		max-width: 1100px;
+		text-align: justify;
+	}
 	.cards-block {
 		display: inline-flex;
 		flex-flow: row wrap;

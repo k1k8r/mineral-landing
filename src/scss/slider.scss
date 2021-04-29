@@ -1,0 +1,38 @@
+@import "normalize";
+@import "variables";
+
+.slider {
+	background-color: #ededed;
+	padding: 80px 20px;
+
+	&__title {
+		font-size: 64px;
+		font-weight: 500;
+		color: $main-text-color;
+		margin-bottom: 50px;
+	}
+
+	&-wrapper {
+		max-width: $container-width;
+		margin: 0 auto;
+	}
+	&-container {
+	}
+	&-track {
+	}
+	&-item {
+	}
+	&-btn {
+		text-align: center;
+	}
+	&-btn__prev {
+	}
+	&-btn__next {
+	}
+}
+
+.container {
+	max-width: $container-width;
+	margin: 0 auto;
+	padding: 0 20px;
+}
