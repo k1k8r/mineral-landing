@@ -19,13 +19,14 @@ const scssFiles = [
 	'./src/scss/application.scss',
 	'./src/scss/advantages.scss',
 	'./src/scss/slider.scss',
+	'./src/scss/form.scss',
 ]
 
 // Порядок подключения JS файлов
 const jsFiles = [
 	'./src/js/burger.js',
 	'./src/js/popup.js',
-	'./src/js/slider.js',
+	'./src/js/anchors.js',
 ]
 
 //Таск на стили CSS

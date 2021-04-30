@@ -24,10 +24,10 @@
 				<img class="header-logo" src="build/img/header/logo.png" alt="Logo">
 				<nav class="header-nav">
 					<ul class="header-menu">
-						<li><a class="header-menu__link" href="#">О нас</a></li>
-						<li><a class="header-menu__link" href="#">Сферы применения</a></li>
-						<li><a class="header-menu__link" href="#">Наши преимущества</a></li>
-						<li><a class="header-menu__link" href="#">Сертификаты и патенты</a></li>
+						<li><a class="header-menu__link" href="#hero">О нас</a></li>
+						<li><a class="header-menu__link" href="#application">Сферы применения</a></li>
+						<li><a class="header-menu__link" href="#advantages">Наши преимущества</a></li>
+						<li><a class="header-menu__link" href="#slider">Сертификаты и патенты</a></li>
 					</ul>
 					<button class="header-menu__button">Связаться с нами</button>
 				</nav>
@@ -35,7 +35,7 @@
 		</div>
 	</header>
 
-	<section class="hero">
+	<section id="hero" class="hero">
 		<div class="text-raws">
 			<div class="text-raw__1">Наноминералы</div>
 			<div class="text-raw__2">и наноматериалы на их основе</div>
@@ -43,6 +43,7 @@
 				для биотехнических, медицинских,<br> экологических и других приложений
 			</div>
 		</div>
+		<h1 id="application"></h1>
 	</section>
 
 	<section class="application">
@@ -63,10 +64,11 @@
 				</p>
 			</div>
 			<button class="application__button">Узнать больше</button>
+			<h1 id="advantages"></h1>
 		</div>
 	</section>
 
-	<section class="advantages">
+	<section id="advantages" class="advantages">
 		<div class="container">
 			<div class="advantages__topic">Наши преимущества</div>
 			<div class="cards-block">
@@ -101,7 +103,9 @@
 			<p class="advantages__description">Компания ведет исследования и разработки в области создания высокодисперсных
 				органо-минеральных наноматериалов для основных классов природных и синтетических полимеров, обеспечивающие
 				высокие барьерные, механические, термические и другие эксплуатационные свойства.</p>
+			<h1 id="slider"></h1>
 		</div>
+
 	</section>
 
 
@@ -120,6 +124,49 @@
 		</div>
 	</section>
 
+	<section class="form">
+		<div class="form-container">
+			<div class="form-data">
+				<h1 class="form-data__title">
+					Перейдите
+					на новый уровень
+					нанотехнологий
+				</h1>
+				<p class="form-data__description">
+					Заполните форму обратной связи и мы свяжемся с вами и <br>ответим на все
+					интересующие вас вопросы
+				</p>
+			</div>
+			<form class="form-block" action="#">
+				<div class="form-main__wrapper">
+					<div class="form__inputs">
+						<div class="form-wrapper">
+							<img class="form__img" src="build/img/form/useer-icon.svg" alt=""><input class="form__input"
+								type="text" placeholder="Контакное лицо">
+							<img class="form__img" src="build/img/form/company-icon.svg" alt=""><input class="form__input"
+								type="text" placeholder="Компания">
+						</div>
+						<div class="form-wrapper">
+							<img class="form__img" src="build/img/form/phone-icon.svg" alt=""><input id="selector"
+								class="form__input" type="text" placeholder="Телефон">
+							<img class="form__img" src="build/img/form/mail-icon.svg" alt=""><input id="email"
+								class="form__input" type="text" placeholder="E-mail">
+						</div>
+					</div>
+					<div class="form-wrapper">
+						<img class="form__img" src="build/img/form/comment-icon.svg" alt=""><input class="form__input"
+							type="text" placeholder="Комментарий">
+
+					</div>
+				</div>
+				<div class="form__button-wrapper"><button class="form__button">Отправить заявку</button></div>
+				<p class="form__note">
+					Нажимая кнопку “Отправить”, вы соглашаетесь с условиями Политики конфиденциальности
+				</p>
+			</form>
+		</div>
+	</section>
+
 </body>
 
 <script type="module">
@@ -133,9 +180,16 @@
 		autoplay: true,
 		autoplayButtonOutput: false,
 	});
+
+	var element = document.getElementById('selector');
+	var maskOptions = {
+		mask: '+{7}(000)000-00-00'
+	};
+	var mask = IMask(element, maskOptions);
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="https://unpkg.com/imask"></script>
 <script src="build/js/script.js"></script>
 
 </html>
