@@ -55,7 +55,19 @@
             color: $main-background;
         }
     }
+    &-footer {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-top: 15px;
+    }
+    &__note {
+        text-align: center;
+        color: white;
+        margin-top: 15px;
+    }
     &__button {
+        width: 220px;
         text-align: center;
         font-size: 18px;
         font-weight: 500;
@@ -69,6 +81,14 @@
             display: flex;
             justify-content: center;
             background-color: $main-background;
+        }
+    }
+}
+
+@media (max-width: 940px) {
+    .form {
+        &-container {
+            flex-wrap: wrap;
         }
     }
 }
