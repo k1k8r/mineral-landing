@@ -1,0 +1,89 @@
+@import "normalize";
+@import "variables";
+.footer {
+    &-container {
+        display: flex;
+        flex-flow: row;
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 25px 20px;
+    }
+    &-aside {
+        margin-right: 20px;
+        &>*:not(:last-child) {
+            margin-bottom: 26px;
+        }
+        .contacts {
+            font-size: 18px;
+            font-weight: 700;
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+    &-body {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    &-nav {
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        margin-left: 20px;
+    }
+    &-menu {
+        display: flex;
+        position: relative;
+        flex-flow: row wrap;
+        z-index: 3;
+        & li {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin-right: 30px;
+            height: 40px;
+        }
+        &__link {
+            font-size: 24px;
+            font-weight: 400;
+            text-decoration: none;
+            background: $main-gradient;
+            background-clip: text;
+            color: transparent;
+            &:hover {
+                color: $text-hover;
+                cursor: pointer;
+            }
+        }
+    }
+    .copyright-block {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        a {
+            color: $text-hover;
+        }
+        &__text {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .footer {
+        &-nav {
+            margin: 15px 0;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        &-container {
+            flex-flow: row wrap;
+        }
+    }
+}
