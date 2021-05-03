@@ -1,0 +1,74 @@
+@import "normalize";
+@import "variables";
+.form {
+    position: relative;
+    background: url("../../build/img/form/form-background.png") center no-repeat;
+    background-size: cover;
+    z-index: 1;
+    &::before {
+        content: "";
+        display: block;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(53, 53, 53, 0.5);
+        z-index: -1;
+    }
+    &-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 100px 20px 0;
+    }
+    &-data {
+        &__title {
+            font-size: 48px;
+            font-weight: 700;
+            color: $main-background;
+            margin-bottom: 20px;
+        }
+        &__description {
+            font-size: 20px;
+            font-weight: 400;
+            color: $main-background;
+        }
+    }
+    &-block {
+        background: $main-gradient;
+        padding: 80px 50px 50px;
+    }
+    &__img {
+        max-width: 100%;
+        margin: 10px 0 0 10px;
+    }
+    &__input {
+        font-size: 18px;
+        font-weight: 400;
+        color: $main-background;
+        background-color: transparent;
+        border-bottom: 1px solid $main-background;
+        margin: 10px;
+        &::placeholder {
+            color: $main-background;
+        }
+    }
+    &__button {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        background: $main-gradient;
+        background-clip: text;
+        color: transparent;
+        background-color: $main-background;
+        padding: 17px;
+        &-wrapper {
+            width: 220px;
+            display: flex;
+            justify-content: center;
+            background-color: $main-background;
+        }
+    }
+}
