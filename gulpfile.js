@@ -20,7 +20,7 @@ const scssFiles = [
     './src/scss/hero.scss',
     './src/scss/form.scss',
     './src/scss/footer.scss',
-    './src/scss/slider.scss',
+    './src/scss/slick-slider.scss'
 ]
 
 // Порядок подключения JS файлов
@@ -28,6 +28,7 @@ const jsFiles = [
     './src/js/burger.js',
     './src/js/popup.js',
     './src/js/anchors.js',
+    './src/js/slick-slider.js'
 ]
 
 //Таск на стили CSS

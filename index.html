@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link rel="stylesheet" href="build/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <title>ОТП "Минералика"</title>
 </head>
 
@@ -102,21 +102,14 @@
 
     </section>
 
-
-
-    <section class="slider">
-        <div class="container">
-            <h1 class="slider__title">Публикации</h1>
-            <div class="my-slider">
-                <div><img src="build/img/slider/slide-1.png" alt="Slide-1"></div>
-                <div><img src="build/img/slider/slide-2.png" alt="Slide-2"></div>
-                <div><img src="build/img/slider/slide-3.png" alt="Slide-3"></div>
-                <div><img src="build/img/slider/slide-4.png" alt="Slide-4"></div>
-                <div><img src="build/img/slider/slide-5.png" alt="Slide-5"></div>
-                <div><img src="build/img/slider/slide-6.png" alt="Slide-6"></div>
-            </div>
-        </div>
-    </section>
+    <div class="slider-index">
+        <div><img src="build/img/slider/slide-1.png" alt="Slide-1"></div>
+        <div><img src="build/img/slider/slide-2.png" alt="Slide-2"></div>
+        <div><img src="build/img/slider/slide-3.png" alt="Slide-3"></div>
+        <div><img src="build/img/slider/slide-4.png" alt="Slide-4"></div>
+        <div><img src="build/img/slider/slide-5.png" alt="Slide-5"></div>
+        <div><img src="build/img/slider/slide-6.png" alt="Slide-6"></div>
+    </div>
 
     <section class="form" id="form">
         <div class="form-container">
@@ -179,13 +172,10 @@
     </footer>
 </body>
 
-<script type="module">
-    import { tns } from './node_modules/tiny-slider/src/tiny-slider.js'; var slider = tns({ container: '.my-slider', items: 5, gutter: 15, slideBy: 1, controls: false, autoplay: true, autoplayButtonOutput: false, }); var element = document.getElementById('selector');
-    var maskOptions = { mask: '+{7}(000)000-00-00' }; var mask = IMask(element, maskOptions);
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="https://unpkg.com/imask"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="build/js/script.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 </html>
